@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/website/favicon.ico">
+
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79BJNDZDJR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-79BJNDZDJR');
+    </script>
+
+    <!-- TÍTULO OTIMIZADO PARA SEO -->
+    <title>Criação de Websites - ABChicomo Services | Sites Profissionais para Advogados, Médicos e Consultores em
+        Angola</title>
+
+    <!-- META DESCRIPTION -->
+    <meta name="description"
+        content="Criação de websites profissionais para advogados, médicos, consultores e profissionais liberais em Angola. Design responsivo, SEO, integração com WhatsApp. Pacotes a partir de 75.000 Kz.">
+
+    <!-- PALAVRAS-CHAVE -->
+    <meta name="keywords"
+        content="criação de sites Angola, website profissional Luanda, sites para advogados, sites para médicos, desenvolvimento web Angola, ABChicomo Services">
+
+    <!-- AUTHOR -->
+    <meta name="author" content="Artur Chicomo - ABChicomo Services">
+
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Criação de Websites - ABChicomo Services">
+    <meta property="og:description" content="Sites profissionais que atraem clientes para seu negócio em Angola.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abchicomo.vercel.com/servicos/desenvolvimento.html">
+    <meta property="og:image" content="https://abchicomo.vercel.com/images/ABChicomo.jpg">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../images/website/favicon.ico">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ESTILOS ESPECÍFICOS ===== */
+        .service-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="1"/></svg>');
+            background-size: 30px 30px;
+            animation: move 20s linear infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            to {
+                transform: translateX(50%) translateY(50%);
+            }
+        }
+
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-hero h1 {
+            color: white;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .service-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.1);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .overview-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .overview-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .overview-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .overview-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .overview-list li i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .overview-image {
+            text-align: center;
+        }
+
+        .overview-image i {
+            font-size: 8rem;
+            color: var(--accent-color);
+            opacity: 0.5;
+        }
+
+        .services-detail {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .detail-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .detail-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .detail-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(230, 126, 34, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .detail-card:hover .detail-icon {
+            background: var(--accent-color);
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .detail-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .detail-card p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .detail-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .detail-list li {
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .detail-list li i {
+            color: var(--success-color);
+            font-size: 0.9rem;
+        }
+
+        .pricing-section {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent-color);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-accent);
+            z-index: 2;
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px dashed var(--gray-light);
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .period {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-features li i {
+            color: var(--success-color);
+        }
+
+        .pricing-footer {
+            text-align: center;
+        }
+
+        .pricing-note {
+            text-align: center;
+            color: var(--gray);
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-note i {
+            color: var(--accent-color);
+        }
+
+        .benefits-section {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .benefits-section h2 {
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .benefit-item i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .faq-section {
+            padding: 5rem 5%;
+            background: var(--light-bg);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: var(--light-bg);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+            color: var(--accent-color);
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem 1.2rem;
+            color: var(--gray);
+            display: none;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        .cta-section {
+            padding: 4rem 5%;
+            text-align: center;
+            background: linear-gradient(135deg, var(--white), var(--light-bg));
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 992px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-card.featured {
+                grid-column: span 2;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                grid-column: auto;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+                line-height: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Button - Flutuante -->
+    <a href="https://wa.me/244954996234?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20websites%20profissionais"
+        class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header com LOGO -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/website/navbar.png" alt="ABChicomo Services - Criação de Sites em Angola"
+                        class="logo-img">
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Serviços <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="desenvolvimento.html" class="active">Criação de Websites</a>
+                        <a href="identidade-visual.html">Identidade Visual</a>
+                        <a href="marketing-digital.html">Marketing Digital</a>
+                        <a href="consultoria.html">Consultoria</a>
+                        <a href="sistemas.html">Sistemas Empresariais</a>
+                    </div>
+                </li>
+                <li><a href="../portfolio.html">Portfólio</a></li>
+                <li><a href="../sobre.html">Sobre Nós</a></li>
+                <li><a href="../contato.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li>Criação de Websites</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="service-hero">
+            <div class="container">
+                <div class="hero-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span class="hero-badge">💻 SERVIÇO PRINCIPAL</span>
+                <h1>CRIAÇÃO DE WEBSITES PROFISSIONAIS</h1>
+                <p>Sites modernos, responsivos e otimizados para atrair clientes para o seu negócio em Angola</p>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="overview-grid">
+            <div class="overview-content">
+                <span class="section-badge">SOBRE O SERVIÇO</span>
+                <h2>Transformamos sua presença online</h2>
+                <p>Na ABChicomo Services, criamos websites que não são apenas bonitos, mas também <strong>ferramentas de
+                        vendas</strong> que trabalham 24 horas por dia para o seu negócio.</p>
+                <p>Especializados em atender <strong>profissionais liberais</strong> (advogados, médicos, consultores,
+                    arquitetos, explicadores), desenvolvemos sites que transmitem credibilidade, autoridade e
+                    profissionalismo.</p>
+
+                <ul class="overview-list">
+                    <li><i class="fas fa-check-circle"></i> Design responsivo (funciona em celular, tablet e computador)
+                    </li>
+                    <li><i class="fas fa-check-circle"></i> Otimização para motores de busca (SEO)</li>
+                    <li><i class="fas fa-check-circle"></i> Integração com WhatsApp e redes sociais</li>
+                    <li><i class="fas fa-check-circle"></i> Painel administrativo para você gerenciar conteúdo</li>
+                </ul>
+            </div>
+            <div class="overview-image">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+        </section>
+
+        <!-- Detalhes dos Serviços -->
+        <section class="services-detail">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O que oferecemos</h2>
+                    <p>Soluções completas para sua presença digital</p>
+                </div>
+
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Design Personalizado</h3>
+                        <p>Criamos um visual único que representa a identidade do seu negócio.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Layout exclusivo</li>
+                            <li><i class="fas fa-check"></i> Cores da sua marca</li>
+                            <li><i class="fas fa-check"></i> Tipografia profissional</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Responsividade</h3>
+                        <p>Seu site perfeito em celulares, tablets e computadores.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Adaptação automática</li>
+                            <li><i class="fas fa-check"></i> Navegação touch-friendly</li>
+                            <li><i class="fas fa-check"></i> Carregamento rápido</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Otimização SEO</h3>
+                        <p>Apareça nas primeiras posições do Google.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Palavras-chave estratégicas</li>
+                            <li><i class="fas fa-check"></i> Meta tags otimizadas</li>
+                            <li><i class="fas fa-check"></i> URLs amigáveis</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>Integração WhatsApp</h3>
+                        <p>Conecte-se diretamente com seus clientes.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Botão de contato</li>
+                            <li><i class="fas fa-check"></i> Mensagens automáticas</li>
+                            <li><i class="fas fa-check"></i> Atendimento rápido</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preços -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">💰 INVESTIMENTO</span>
+                    <h2>Pacotes de Criação de Websites</h2>
+                    <p>Escolha o plano ideal para o seu negócio</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Pacote Presença -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Presença</h3>
+                            <div class="price">75.000 Kz</div>
+                            <span class="period">/pagamento único</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Website institucional (3 páginas)</li>
+                            <li><i class="fas fa-check"></i> Design responsivo</li>
+                            <li><i class="fas fa-check"></i> SEO básico</li>
+                            <li><i class="fas fa-check"></i> Integração WhatsApp</li>
+                            <li><i class="fas fa-check"></i> Formulário de contato</li>
+                            <li><i class="fas fa-check"></i> Suporte 30 dias</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Presença%20(75.000%20Kz)%20para%20criação%20de%20website"
+                                class="btn btn-outline btn-block" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Contratar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pacote Profissional -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">RECOMENDADO</div>
+                        <div class="pricing-header">
+                            <h3>Profissional</h3>
+                            <div class="price">125.000 Kz</div>
+                            <span class="period">/pagamento único</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Website completo (5-7 páginas)</li>
+                            <li><i class="fas fa-check"></i> Design premium</li>
+                            <li><i class="fas fa-check"></i> Identidade Visual</li>
+                            <li><i class="fas fa-check"></i> SEO avançado</li>
+                            <li><i class="fas fa-check"></i> Blog integrado</li>
+                            <li><i class="fas fa-check"></i> Suporte 90 dias</li>
+                            <li><i class="fas fa-check"></i> Treinamento incluso</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Profissional%20(125.000%20Kz)%20para%20criação%20de%20website"
+                                class="btn btn-primary btn-block" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Contratar
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pacote Autoridade -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Autoridade</h3>
+                            <div class="price">195.000 Kz</div>
+                            <span class="period">/pagamento único</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Website completo + extras</li>
+                            <li><i class="fas fa-check"></i> Design exclusivo</li>
+                            <li><i class="fas fa-check"></i> Identidade Visual completa</li>
+                            <li><i class="fas fa-check"></i> SEO + Google Meu Negócio</li>
+                            <li><i class="fas fa-check"></i> Agendamento online</li>
+                            <li><i class="fas fa-check"></i> E-mail profissional</li>
+                            <li><i class="fas fa-check"></i> Suporte 1 ano</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Autoridade%20(195.000%20Kz)%20para%20criação%20de%20website"
+                                class="btn btn-outline btn-block" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Contratar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing-note">
+                    <p><i class="fas fa-credit-card"></i> Parcelamos em até 3x no Multicaixa Express | Desenvolvimento
+                        em 10-20 dias úteis</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2>Por que escolher a ABChicomo Services?</h2>
+
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-medal"></i>
+                        <h3>3+ Anos de Experiência</h3>
+                        <p>Mais de 5 anos criando sites para profissionais liberais em Angola.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Suporte Contínuo</h3>
+                        <p>Acompanhamento mesmo após a entrega do projeto.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Entrega Rápida</h3>
+                        <p>Desenvolvimento ágil sem comprometer a qualidade.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Clientes Satisfeitos</h3>
+                        <p>Diversos profissionais já conquistaram mais clientes com nossos sites.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perguntas Frequentes</h2>
+                    <p>Tire suas dúvidas sobre criação de websites</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Quanto tempo leva para criar meu site?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>O prazo varia conforme o pacote: Presença (5-7 dias), Profissional (10-15 dias) e
+                                Autoridade (15-20 dias). Trabalhamos com agilidade sem comprometer a qualidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Preciso ter domínio e hospedagem?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Podemos orientar na compra do domínio e hospedagem, ou você pode utilizar os que já
+                                possui. Incluímos suporte para configuração em todos os pacotes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Posso atualizar o site depois de pronto?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! Entregamos com painel administrativo fácil de usar, ou você pode contratar nosso
+                                plano de suporte mensal para manutenções.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Meu site aparecerá no Google?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! Todos os nossos sites são otimizados para mecanismos de busca (SEO). Quanto melhor o
+                                pacote, mais recursos de SEO incluímos.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Vocês criam sites para advogados?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! Somos especialistas em sites para advogados, médicos, consultores e todos os tipos
+                                de profissionais liberais. Temos experiência com as necessidades específicas de cada
+                                área.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto para ter seu site profissional?</h2>
+                <p>Entre em contato agora mesmo e receba um orçamento personalizado.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/244954996234?text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20meu%20website%20profissional"
+                        class="btn btn-primary btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                    <a href="../contato.html" class="btn btn-outline btn-large">Usar formulário</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="../images/website/footer.jpg" alt="ABChicomo Services" class="footer-logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h3 class="footer-logo-fallback" style="display:none;">ABChicomo<span>Services</span></h3>
+                    <p class="footer-description">Criamos websites profissionais que atraem clientes para advogados,
+                        médicos, consultores e profissionais liberais em Angola.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/ABChicomo" class="social-link" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/Abchicomo" class="social-link" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@abchicomo" class="social-link" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://linkedin.com/company/abchicomo" class="social-link" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="desenvolvimento.html">Criação de Websites</a></li>
+                        <li><a href="identidade-visual.html">Identidade Visual</a></li>
+                        <li><a href="marketing-digital.html">Marketing Digital</a></li>
+                        <li><a href="consultoria.html">Consultoria</a></li>
+                        <li><a href="sistemas.html">Sistemas Empresariais</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../sobre.html">Sobre Nós</a></li>
+                        <li><a href="../contato.html">Contactos</a></li>
+                        <li><a href="../termos.html">Termos de Uso</a></li>
+                        <li><a href="../privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contactos</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> 921 058 404</li>
+                        <li><i class="fab fa-whatsapp"></i> 954 996 234</li>
+                        <li><i class="fas fa-envelope"></i> Abchicomoservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Huila, Angola</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span class="current-year">2024</span> ABChicomo Services. Todos os direitos reservados.
+                        Desenvolvido por ABChicomo Services.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="../termos.html">Termos de Uso</a>
+                    <a href="../privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Função para FAQ
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+            const answer = element.nextElementSibling;
+            answer.classList.toggle('show');
+
+            const icon = element.querySelector('i');
+            if (answer.classList.contains('show')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Fechar FAQ ao clicar em outro
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherQuestion = otherItem.querySelector('.faq-question');
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherQuestion.querySelector('i');
+
+                            otherQuestion.classList.remove('active');
+                            otherAnswer.classList.remove('show');
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                });
+            });
+
+            // Atualizar ano
+            const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+            yearElements.forEach(el => el.textContent = currentYear);
+        });
+    </script>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

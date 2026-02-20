@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/website/favicon.ico">
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79BJNDZDJR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-79BJNDZDJR');
+    </script>
+
+    <!-- TÍTULO OTIMIZADO PARA SEO -->
+    <title>ABChicomo Services - Portfólio de Projectos</title>
+
+    <!-- META DESCRIPTION OTIMIZADA -->
+    <meta name="description"
+        content="Conheça nosso portfólio de websites criados para advogados, médicos, consultores e profissionais liberais em Angola. Projetos reais que atraem clientes.">
+
+    <!-- PALAVRAS-CHAVE -->
+    <meta name="keywords"
+        content="portfólio ABChicomo, sites para advogados Angola, websites para médicos, criação de sites Luanda, exemplos de sites profissionais">
+
+    <!-- AUTHOR -->
+    <meta name="author" content="Artur Chicomo - ABChicomo Services">
+
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH PARA REDES SOCIAIS -->
+    <meta property="og:title" content="Portfólio - ABChicomo Services">
+    <meta property="og:description"
+        content="Veja exemplos reais de websites criados para profissionais liberais em Angola.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abchicomo.vercel.app" />
+    <meta property="og:image" content="https://abchicomo.vercel.app/images/website/ABChicomo.png" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="images/website/favicon.ico">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS RESPONSIVO -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ESTILOS ESPECÍFICOS DA PÁGINA DE PORTFÓLIO ===== */
+
+        /* Hero Section */
+        .portfolio-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 6rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="1"/></svg>');
+            background-size: 30px 30px;
+            animation: move 20s linear infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            to {
+                transform: translateX(50%) translateY(50%);
+            }
+        }
+
+        .portfolio-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .portfolio-hero h1 {
+            color: white;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .portfolio-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Filtros */
+        .portfolio-filters {
+            padding: 2rem 5%;
+            background: var(--light-bg);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .filters-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            background: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        /* Portfólio Grid */
+        .portfolio-section {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--white), var(--light-bg));
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .portfolio-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+            animation: fadeIn 0.6s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .portfolio-image {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(230, 126, 34, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+            color: white;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .portfolio-card:hover .overlay-content {
+            transform: translateY(0);
+        }
+
+        .overlay-content i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .overlay-content span {
+            display: block;
+            font-weight: 600;
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+
+        .portfolio-category {
+            display: inline-block;
+            background: rgba(230, 126, 34, 0.1);
+            color: var(--accent-color);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .portfolio-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+
+        .portfolio-info p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .portfolio-tech {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: var(--light-bg);
+            color: var(--text-color);
+            padding: 0.2rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .portfolio-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .portfolio-link:hover {
+            gap: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Casos de Destaque */
+        .featured-projects {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .featured-projects h2 {
+            color: white;
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .featured-projects>p {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .featured-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .featured-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .featured-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .featured-card:hover .featured-image img {
+            transform: scale(1.1);
+        }
+
+        .featured-content {
+            padding: 1.5rem;
+        }
+
+        .featured-content h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-content p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.2rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Depoimentos */
+        .testimonials-section {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .testimonial-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent-color);
+        }
+
+        .testimonial-card i {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            color: var(--accent-color);
+            opacity: 0.2;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+            color: var(--primary-color);
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        /* CTA Final */
+        .portfolio-cta {
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+            padding: 4rem 5%;
+            text-align: center;
+            border-top: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .portfolio-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-cta p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Button - Flutuante -->
+    <a href="https://wa.me/244954996234?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20do%20portfólio"
+        class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header com LOGO -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/website/navbar.png" alt="ABChicomo Services - Criação de Sites em Angola"
+                        class="logo-img">
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Serviços <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="servicos/desenvolvimento.html">Criação de Websites</a>
+                        <a href="servicos/identidade-visual.html">Identidade Visual</a>
+                        <a href="servicos/marketing-digital.html">Marketing Digital</a>
+                        <a href="servicos/consultoria.html">Consultoria</a>
+                        <a href="servicos/sistemas.html">Sistemas Empresariais</a>
+                    </div>
+                </li>
+                <li><a href="portfolio.html" class="active">Portfólio</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li>Portfólio</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="portfolio-hero">
+            <div class="container">
+                <span class="hero-badge">📸 NOSSOS TRABALHOS</span>
+                <h1>PORTFÓLIO DE PROJECTOS</h1>
+                <p>Conheça alguns dos websites que criamos para profissionais liberais em Angola</p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="portfolio-filters">
+            <div class="filters-container">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="negocios">Pequenos Negócios</button>
+                <button class="filter-btn" data-filter="advocacia">Advocacia</button>
+                <button class="filter-btn" data-filter="medicina">Medicina</button>
+                <button class="filter-btn" data-filter="consultoria">Consultoria</button>
+                <button class="filter-btn" data-filter="arquitetura">Outros</button>
+
+            </div>
+        </section>
+
+        <!-- Portfólio Grid -->
+        <section class="portfolio-section">
+            <div class="portfolio-grid">
+
+                <!-- Projeto 6 - Pequeno Negócio -->
+                <div class="portfolio-card" data-category="negocios">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/negocio1.jpg" alt="Website para Pequeno Negócio"
+                            onerror="this.src='https://placehold.co/600x400/1a2b3c/e67e22?text=Site+Negócio'">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Ver Projeto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Pequeno Negócio</span>
+                        <h3>ZILSON CORTES</h3>
+                        <p>Website que faz gestão do seu salão de beleza
+                            permitindo mais clientes e atendimento, ver preços, agendas, localização e pedidos via
+                            WhatsApp.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API WhatsApp</span>
+                        </div>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Ver projeto <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Acessar Website <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto 1 - Advocacia -->
+                <div class="portfolio-card" data-category="advocacia">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/advocacia1.jpg" alt="Website para Advogado em Luanda"
+                            onerror="this.src='https://placehold.co/600x400/1a2b3c/e67e22?text=Site+Advocacia'">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Ver Projeto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Advocacia</span>
+                        <h3>Manuel & Associados</h3>
+                        <p>Website institucional com área de atuação, artigos jurídicos e formulário de contato.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SEO</span>
+                            <span class="tech-tag">API WhatsApp</span>
+                        </div>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Ver projeto <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Acessar Website <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 - Medicina -->
+                <div class="portfolio-card" data-category="medicina">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/medicina1.jpg" alt="Website para Clínica Médica"
+                            onerror="this.src='https://placehold.co/600x400/1a2b3c/e67e22?text=Site+Clínica'">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Ver Projeto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Medicina</span>
+                        <h3>Clínica Esperança</h3>
+                        <p>Website com informações sobre especialidades, corpo clínico e agendamento online.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Responsivo</span>
+                        </div>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Ver projeto <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Acessar Website <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 - Consultoria -->
+                <div class="portfolio-card" data-category="consultoria">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/consultoria1.jpg" alt="Website para Consultor de Negócios"
+                            onerror="this.src='https://placehold.co/600x400/1a2b3c/e67e22?text=Site+Consultoria'">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Ver Projeto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Consultoria</span>
+                        <h3>Consultoria</h3>
+                        <p>Site profissional com portfólio de cases, depoimentos e blog com artigos.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Ver projeto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 - Arquitetura -->
+                <div class="portfolio-card" data-category="arquitetura">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/arquitetura1.jpg" alt="Website para Arquiteto"
+                            onerror="this.src='https://placehold.co/600x400/1a2b3c/e67e22?text=Site+Arquiteto'">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Ver Projeto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Outros</span>
+                        <h3>Artur Chicomo</h3>
+                        <p>Portfólio de projetos com galeria de imagens, informações sobre serviços e contato.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Lightbox</span>
+                        </div>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Ver projeto <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Ver Portfólio <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projeto 5 - Explicador -->
+                <div class="portfolio-card" data-category="negocios">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/explicador1.jpg" alt="Website para Explicador"
+                            onerror="this.src='https://placehold.co/600x400/1a2b3c/e67e22?text=Site+Explicador'">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Ver Projeto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Educação</span>
+                        <h3>Centro Explicativo +Saber</h3>
+                        <p>Site com informações sobre disciplinas, horários e formulário de inscrição.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                        <a href="#" class="portfolio-link" target="_blank">
+                            Ver projeto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Projetos em Destaque -->
+        <section class="featured-projects">
+            <div class="container">
+                <h2>Projetos em Destaque</h2>
+
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="images/portfolio/destaque1.jpg" alt="Website para Clínica Médica - Destaque"
+                                onerror="this.src='https://placehold.co/600x400/1a2b3c/e67e22?text=Caso+Sucesso'">
+                        </div>
+                        <div class="featured-content">
+                            <span class="featured-badge">+40% em adesão</span>
+                            <h3>Play Zone</h3>
+                            <p>Após o lançamento do site, aumentou em 40% o número de consultas agendadas
+                                online.</p>
+                        </div>
+                    </div>
+
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="images/portfolio/destaque2.jpg" alt="Website para Advogado - Destaque"
+                                onerror="this.src='https://placehold.co/600x400/1a2b3c/e67e22?text=Caso+Sucesso'">
+                        </div>
+                        <div class="featured-content">
+                            <span class="featured-badge">+25 novos clientes</span>
+                            <h3>Manuel & Associados</h3>
+                            <p>Em apenas 3 meses, o site gerou mais de 25 novos clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">💬 DEPOIMENTOS</span>
+                    <h2 class="section-title">O que nossos clientes dizem</h2>
+                    <p class="section-subtitle">A satisfação dos nossos clientes é o nosso maior reconhecimento</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="testimonial-text">"O site que a ABChicomo Services criou para meus negocios superou
+                            todas as expectativas. Design moderno, rápido e atraiu muitos novos clientes."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">CM</div>
+                            <div class="author-info">
+                                <h4>Ferreira Ngonga</h4>
+                                <p>Negociante</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="testimonial-text">"Excelente profissional! Meu site de advocacia ficou perfeito e já
+                            conquistei vários clientes através dele. Recomendo fortemente."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AM</div>
+                            <div class="author-info">
+                                <h4>Dr. António Mendes</h4>
+                                <p>Advogado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="testimonial-text">"Artur entendeu exatamente o que eu precisava para minha
+                            consultoria. O site tem uma aparência profissional e já me abriu muitas portas."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div class="author-info">
+                                <h4>João Raimundo</h4>
+                                <p>Consultor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="portfolio-cta">
+            <div class="container">
+                <h2>Pronto para ter um site como esses?</h2>
+                <p>Entre em contato agora mesmo e receba um orçamento personalizado para o seu negócio.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/244954996234?text=Olá!%20Quero%20um%20site%20profissional%20como%20os%20do%20portfólio"
+                        class="btn btn-primary btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                    <a href="contato.html" class="btn btn-outline btn-large">Enviar mensagem</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/website/navbar.png" alt="ABChicomo Services" class="footer-logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h3 class="footer-logo-fallback" style="display:none;">ABChicomo<span>Services</span></h3>
+                    <p class="footer-description">Criamos websites profissionais que atraem clientes para advogados,
+                        médicos, consultores e profissionais liberais em Angola.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/ABChicomo" class="social-link" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/Abchicomo" class="social-link" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@abchicomo" class="social-link" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://linkedin.com/company/abchicomo" class="social-link" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="desenvolvimento.html">Criação de Websites</a></li>
+                        <li><a href="identidade-visual.html">Identidade Visual</a></li>
+                        <li><a href="marketing-digital.html">Marketing Digital</a></li>
+                        <li><a href="consultoria.html">Consultoria</a></li>
+                        <li><a href="sistemas.html">Sistemas Empresariais</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../sobre.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contato.html">Contactos</a></li>
+                        <li><a href="../termos.html">Termos de Uso</a></li>
+                        <li><a href="../privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contactos</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> 921 058 404</li>
+                        <li><i class="fab fa-whatsapp"></i> 954 996 234</li>
+                        <li><i class="fas fa-envelope"></i> Abchicomoservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Huila, Angola</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span class="current-year">2024</span> ABChicomo Services. Todos os direitos reservados.
+                        Desenvolvido por ABChicomo Services.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="../termos.html">Termos de Uso</a>
+                    <a href="../privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Atualizar ano automaticamente
+        document.addEventListener('DOMContentLoaded', function () {
+            const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+
+            yearElements.forEach(el => {
+                el.textContent = currentYear;
+            });
+
+            // Filtros do portfólio
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remover active de todos
+                    filterBtns.forEach(b => b.classList.remove('active'));
+
+                    // Adicionar active no clicado
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Animação suave para os links
+            document.querySelectorAll('.portfolio-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Aqui você pode adicionar um link real para o projeto
+                    // Por enquanto, só mostra uma notificação
+                    if (typeof showNotification === 'function') {
+                        showNotification('Projeto em construção. Em breve link disponível.', 'info');
+                    } else {
+                        alert('Projeto em construção. Em breve link disponível.');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

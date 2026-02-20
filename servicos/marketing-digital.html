@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/website/favicon.ico">
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79BJNDZDJR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-79BJNDZDJR');
+    </script>
+
+    <!-- TÍTULO OTIMIZADO PARA SEO -->
+    <title>ABChicomo Services - Marketing Digital para Profissionais Liberais | Angola</title>
+
+    <!-- META DESCRIPTION -->
+    <meta name="description"
+        content="Estratégias de marketing digital para advogados, médicos e consultores em Angola. Gestão de redes sociais, conteúdo e anúncios para atrair mais clientes.">
+
+    <!-- PALAVRAS-CHAVE -->
+    <meta name="keywords"
+        content="marketing digital Angola, gestão de redes sociais, conteúdo para advogados, anúncios online, ABChicomo Services">
+
+    <!-- AUTHOR -->
+    <meta name="author" content="Artur Chicomo - ABChicomo Services">
+
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Marketing Digital - ABChicomo Services">
+    <meta property="og:description" content="Estratégias digitais para profissionais liberais em Angola.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abchicomo.vercel.com/servicos/marketing-digital.html">
+    <meta property="og:image" content="https://abchicomo.vercel.com/images/ABChicomo.jpg">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="images/website/favicon.ico">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos específicos da página */
+        .service-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="1"/></svg>');
+            background-size: 30px 30px;
+            animation: move 20s linear infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            to {
+                transform: translateX(50%) translateY(50%);
+            }
+        }
+
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-hero h1 {
+            color: white;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .service-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.1);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .overview-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .overview-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .overview-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .overview-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .overview-list li i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .services-detail {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .detail-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .detail-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .detail-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(230, 126, 34, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .detail-card:hover .detail-icon {
+            background: var(--accent-color);
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .detail-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .detail-card p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .pricing-section {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent-color);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-accent);
+            z-index: 2;
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px dashed var(--gray-light);
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .period {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-features li i {
+            color: var(--success-color);
+        }
+
+        .benefits-section {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .benefits-section h2 {
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .benefit-item i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            padding: 4rem 5%;
+            text-align: center;
+            background: linear-gradient(135deg, var(--white), var(--light-bg));
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 992px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-card.featured {
+                grid-column: span 2;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                grid-column: auto;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/244954996234?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Marketing%20Digital"
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/website/navbar.png" alt="ABChicomo Services" class="logo-img">
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Serviços <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="desenvolvimento.html">Criação de Websites</a>
+                        <a href="identidade-visual.html">Identidade Visual</a>
+                        <a href="marketing-digital.html" class="active">Marketing Digital</a>
+                        <a href="consultoria.html">Consultoria</a>
+                        <a href="sistemas.html">Sistemas Empresariais</a>
+                    </div>
+                </li>
+                <li><a href="../portfolio.html">Portfólio</a></li>
+                <li><a href="../sobre.html">Sobre Nós</a></li>
+                <li><a href="../contato.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li>Marketing Digital</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="service-hero">
+            <div class="container">
+                <div class="hero-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h1>MARKETING DIGITAL</h1>
+                <p>Estratégias digitais personalizadas para atrair mais clientes para seu negócio</p>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="overview-grid">
+            <div class="overview-content">
+                <h2>Destaque-se no ambiente digital</h2>
+                <p>Na ABChicomo Services, criamos estratégias de marketing digital focadas em <strong>resultados
+                        reais</strong> para profissionais liberais como você.</p>
+                <p>Combinamos conteúdo relevante, gestão de redes sociais e anúncios online para atrair os clientes
+                    certos para o seu negócio.</p>
+                <ul class="overview-list">
+                    <li><i class="fas fa-check-circle"></i> Gestão profissional de redes sociais</li>
+                    <li><i class="fas fa-check-circle"></i> Criação de conteúdo estratégico</li>
+                    <li><i class="fas fa-check-circle"></i> Campanhas de anúncios online</li>
+                    <li><i class="fas fa-check-circle"></i> Relatórios mensais de resultados</li>
+                </ul>
+            </div>
+            <div class="overview-image" style="text-align: center;">
+                <i class="fas fa-chart-line" style="font-size: 8rem; color: var(--accent-color); opacity: 0.5;"></i>
+            </div>
+        </section>
+
+        <!-- Serviços Detalhados -->
+        <section class="services-detail">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">O que oferecemos</h2>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fab fa-facebook"></i></div>
+                        <h3>Gestão de Redes Sociais</h3>
+                        <p>Cuidamos das suas redes sociais com conteúdo profissional e estratégico.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Facebook e Instagram</li>
+                            <li><i class="fas fa-check"></i> LinkedIn para profissionais</li>
+                            <li><i class="fas fa-check"></i> Postagens semanais</li>
+                            <li><i class="fas fa-check"></i> Interação com seguidores</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <h3>Criação de Conteúdo</h3>
+                        <p>Conteúdo relevante que posiciona você como autoridade.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Artigos para blog</li>
+                            <li><i class="fas fa-check"></i> Legendas para posts</li>
+                            <li><i class="fas fa-check"></i> Newsletters</li>
+                            <li><i class="fas fa-check"></i> E-books informativos</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-ad"></i></div>
+                        <h3>Anúncios Online</h3>
+                        <p>Campanhas pagas que trazem resultados rápidos.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Google Ads</li>
+                            <li><i class="fas fa-check"></i> Facebook/Instagram Ads</li>
+                            <li><i class="fas fa-check"></i> Remarketing</li>
+                            <li><i class="fas fa-check"></i> Relatórios de ROI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preços -->
+        <section class="pricing-section">
+            <div class="container">
+                <h2 style="text-align: center;">Pacotes de Marketing Digital</h2>
+                <p style="text-align: center; color: var(--gray); margin-bottom: 2rem;">Escolha o plano ideal para sua
+                    estratégia</p>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Presença</h3>
+                            <div class="price">45.000 Kz</div>
+                            <span class="period">/mês</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 8 posts/mês para redes sociais</li>
+                            <li><i class="fas fa-check"></i> Criação de conteúdo</li>
+                            <li><i class="fas fa-check"></i> Relatório mensal</li>
+                            <li><i class="fas fa-check"></i> Suporte por WhatsApp</li>
+                        </ul>
+                        <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Presença%20(45.000%20Kz)"
+                            class="btn btn-outline btn-block">Contratar</a>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">RECOMENDADO</div>
+                        <div class="pricing-header">
+                            <h3>Profissional</h3>
+                            <div class="price">75.000 Kz</div>
+                            <span class="period">/mês</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 15 posts/mês para redes sociais</li>
+                            <li><i class="fas fa-check"></i> Criação de conteúdo premium</li>
+                            <li><i class="fas fa-check"></i> 2 artigos para blog</li>
+                            <li><i class="fas fa-check"></i> Gestão de anúncios (budget à parte)</li>
+                            <li><i class="fas fa-check"></i> Relatório detalhado</li>
+                        </ul>
+                        <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Profissional%20(75.000%20Kz)"
+                            class="btn btn-primary btn-block">Contratar</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Autoridade</h3>
+                            <div class="price">120.000 Kz</div>
+                            <span class="period">/mês</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 20 posts/mês para redes sociais</li>
+                            <li><i class="fas fa-check"></i> Conteúdo estratégico</li>
+                            <li><i class="fas fa-check"></i> 4 artigos para blog</li>
+                            <li><i class="fas fa-check"></i> Gestão completa de anúncios</li>
+                            <li><i class="fas fa-check"></i> E-mail marketing</li>
+                            <li><i class="fas fa-check"></i> Consultoria estratégica</li>
+                        </ul>
+                        <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Autoridade%20(120.000%20Kz)"
+                            class="btn btn-outline btn-block">Contratar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section class="benefits-section">
+            <h2>Por que investir em Marketing Digital?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Alcance</h3>
+                    <p>Chegue até centenas de potenciais clientes diariamente.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-chart-simple"></i>
+                    <h3>Resultados</h3>
+                    <p>Mensure cada ação e otimize constantemente.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Velocidade</h3>
+                    <p>Resultados mais rápidos que métodos tradicionais.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Segmentação</h3>
+                    <p>Atraia apenas quem realmente precisa do seu serviço.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <h2>Pronto para atrair mais clientes?</h2>
+            <p>Vamos criar juntos a estratégia ideal para seu negócio.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/244954996234?text=Olá!%20Quero%20saber%20mais%20sobre%20Marketing%20Digital"
+                    class="btn btn-primary btn-large">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                </a>
+                <a href="../contato.html" class="btn btn-outline btn-large">Usar formulário</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="../images/website/navbar.png" alt="ABChicomo Services" class="footer-logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h3 class="footer-logo-fallback" style="display:none;">ABChicomo<span>Services</span></h3>
+                    <p class="footer-description">Criamos websites profissionais que atraem clientes para advogados,
+                        médicos, consultores e profissionais liberais em Angola.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/ABChicomo" class="social-link" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/Abchicomo" class="social-link" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@abchicomo" class="social-link" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://linkedin.com/company/abchicomo" class="social-link" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="desenvolvimento.html">Criação de Websites</a></li>
+                        <li><a href="identidade-visual.html">Identidade Visual</a></li>
+                        <li><a href="marketing-digital.html">Marketing Digital</a></li>
+                        <li><a href="consultoria.html">Consultoria</a></li>
+                        <li><a href="sistemas.html">Sistemas Empresariais</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../sobre.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contato.html">Contactos</a></li>
+                        <li><a href="../termos.html">Termos de Uso</a></li>
+                        <li><a href="../privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contactos</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> 921 058 404</li>
+                        <li><i class="fab fa-whatsapp"></i> 954 996 234</li>
+                        <li><i class="fas fa-envelope"></i> Abchicomoservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Huila, Angola</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span class="current-year">2024</span> ABChicomo Services. Todos os direitos reservados.
+                        Desenvolvido por ABChicomo Services.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="../termos.html">Termos de Uso</a>
+                    <a href="../privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

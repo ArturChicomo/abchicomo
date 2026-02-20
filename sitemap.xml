@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- PÁGINAS PRINCIPAIS -->
+    <url>
+        <loc>https://abchicomo.vercel.app/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/sobre.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/portfolio.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/contato.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/termos.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/privacidade.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/obrigado.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/404.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+    <!-- SERVIÇOS -->
+    <url>
+        <loc>https://abchicomos.vercel.app/servicos/desenvolvimento.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/servicos/identidade-visual.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomoservices.vercel.app/servicos/marketing-digital.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/servicos/consultoria.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://abchicomo.vercel.app/servicos/sistemas.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>

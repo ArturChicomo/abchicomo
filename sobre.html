@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="images/website/favicon.ico">
+
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79BJNDZDJR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-79BJNDZDJR');
+    </script>
+
+    <!-- TÍTULO OTIMIZADO PARA SEO -->
+    <title>ABChicomo Services - Sobre Nós | Fundador Artur Chicomo</title>
+
+    <!-- META DESCRIPTION OTIMIZADA -->
+    <meta name="description"
+        content="Conheça a história da ABChicomo Services, fundada por Artur Chicomo em 2019. Soluções completas em tecnologia, desenvolvimento web, suporte técnico e comunicação digital em Angola.">
+
+    <!-- PALAVRAS-CHAVE -->
+    <meta name="keywords"
+        content="sobre ABChicomo, Artur Chicomo, fundador ABChicomo, história da empresa, criação de sites Angola, serviços informáticos, desenvolvimento web">
+
+    <!-- AUTHOR -->
+    <meta name="author" content="Artur Chicomo - ABChicomo Services">
+
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH PARA REDES SOCIAIS -->
+    <meta property="og:title" content="Sobre Nós - ABChicomo Services">
+    <meta property="og:description"
+        content="Conheça a história da ABChicomo Services, fundada por Artur Chicomo em 2019. Mais de 5 anos de experiência em criação de websites em Angola.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abchicomo.vercel.com/sobre.html">
+    <meta property="og:image" content="https://abchicomo.vercl.com/images/Artur.jpg">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="images/website/favicon.ico">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS RESPONSIVO -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ESTILOS ESPECÍFICOS DA PÁGINA SOBRE ===== */
+
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 6rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="1"/></svg>');
+            background-size: 30px 30px;
+            animation: move 20s linear infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            to {
+                transform: translateX(50%) translateY(50%);
+            }
+        }
+
+        .about-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero h1 {
+            color: white;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Seção História da Empresa */
+        .company-history {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--white), var(--light-bg));
+        }
+
+        .company-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .company-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .company-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .company-text strong {
+            color: var(--accent-color);
+        }
+
+        .company-text .highlight-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        /* Seção Serviços Detalhados */
+        .services-detailed {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+
+        .services-grid-detailed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .service-block {
+            background: var(--light-bg);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .service-block:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .service-block h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-block h3 i {
+            color: var(--accent-color);
+        }
+
+        .service-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-block ul li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            color: var(--text-color);
+            border-bottom: 1px dashed var(--gray-light);
+        }
+
+        .service-block ul li:last-child {
+            border-bottom: none;
+        }
+
+        .service-block ul li i {
+            color: var(--success-color);
+            margin-top: 0.2rem;
+            min-width: 18px;
+        }
+
+        /* Fundador */
+        .founder-section {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .founder-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .founder-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-hover);
+            border: 5px solid var(--white);
+            transition: var(--transition);
+        }
+
+        .founder-img:hover {
+            transform: scale(1.02);
+        }
+
+        .founder-experience {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.4);
+            border: 3px solid white;
+            min-width: 140px;
+        }
+
+        .founder-experience span {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: white;
+        }
+
+        .founder-experience p {
+            font-size: 0.85rem;
+            margin: 0;
+            opacity: 0.95;
+            color: white;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .founder-content h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-content h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+
+        .founder-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .founder-quote {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            position: relative;
+            border-left: 5px solid var(--accent-color);
+            font-style: italic;
+        }
+
+        .founder-quote i {
+            color: var(--accent-color);
+            font-size: 2rem;
+            opacity: 0.3;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+
+        .founder-quote p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .founder-quote span {
+            display: block;
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Missão, Visão e Valores */
+        .mvv-section {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--white), var(--light-bg));
+        }
+
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .mvv-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .mvv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .mvv-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(230, 126, 34, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .mvv-card:hover .mvv-icon {
+            background: var(--accent-color);
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .mvv-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .mvv-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .values-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .values-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+        }
+
+        .values-list li i {
+            color: var(--accent-color);
+        }
+
+        /* Números */
+        .numbers-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .numbers-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .numbers-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .numbers-section h2 {
+            color: white;
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 3rem;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .number-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .number-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .number-value {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .number-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .founder-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .founder-image {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .founder-experience {
+                right: 0;
+            }
+
+            .mvv-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .numbers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mvv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .numbers-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .founder-experience {
+                position: static;
+                margin: 1rem auto 0;
+                display: inline-block;
+            }
+
+            .services-grid-detailed {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .company-text {
+                font-size: 1rem;
+            }
+
+            .number-value {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Button - Flutuante -->
+    <a href="https://wa.me/244954996234?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20ABChicomo%20Services"
+        class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header com LOGO -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/website/navbar.png" alt="ABChicomo Services - Criação de Sites em Angola"
+                        class="logo-img">
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Serviços <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="servicos/desenvolvimento.html">Criação de Websites</a>
+                        <a href="servicos/identidade-visual.html">Identidade Visual</a>
+                        <a href="servicos/marketing-digital.html">Marketing Digital</a>
+                        <a href="servicos/consultoria.html">Consultoria</a>
+                        <a href="servicos/sistemas.html">Sistemas Empresariais</a>
+                    </div>
+                </li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="sobre.html" class="active">Sobre Nós</a></li>
+                <li><a href="contato.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li>Sobre Nós</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <span class="hero-badge">🌟 QUEM SOMOS</span>
+                <h1>ABChicomo Services</h1>
+                <p>Sua solução completa em tecnologia, desenvolvimento e comunicação digital</p>
+            </div>
+        </section>
+
+        <!-- História da Empresa -->
+        <section class="company-history">
+            <div class="container">
+                <div class="company-content">
+                    <span class="section-badge">📜 NOSSA HISTÓRIA</span>
+                    <h2 class="section-title">ABChicomo Services</h2>
+
+                    <div class="company-text">
+                        <p>Fundada em <strong>2019</strong> por <strong>Artur Chicomo</strong>, a ABChicomo Services é a
+                            sua solução completa em tecnologia, desenvolvimento, suporte técnico e comunicação digital.
+                            Criamos, otimizamos e mantemos sistemas, websites e aplicações, oferecendo também suporte
+                            informático, serviços digitais, cursos especializados e produção de conteúdos para
+                            compartilhar conhecimento e fortalecer a presença online de nossos clientes.</p>
+
+                        <p>Nosso objetivo é entregar soluções eficientes, claras e adaptadas à realidade de cada
+                            cliente, seja para automação de sistemas, desenvolvimento web, manutenção de equipamentos ou
+                            criação de conteúdos informativos e publicitários. Combinamos tecnologia, criatividade e
+                            profissionalismo para transformar ideias em soluções práticas e confiáveis.</p>
+
+                        <div class="highlight-box">
+                            <p style="margin-bottom: 0; font-weight: 600; color: var(--primary-color);">📌 <strong>Aqui
+                                    você encontra tudo em um só lugar:</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços Detalhados -->
+        <section class="services-detailed">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">🔧 O QUE OFERECEMOS</span>
+                    <h2 class="section-title">Serviços Detalhados</h2>
+                    <p class="section-subtitle">Soluções completas para suas necessidades digitais</p>
+                </div>
+
+                <div class="services-grid-detailed">
+                    <!-- Desenvolvimento -->
+                    <div class="service-block">
+                        <h3><i class="fas fa-code"></i> Serviços de Desenvolvimento</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Criação de websites responsivos</li>
+                            <li><i class="fas fa-check-circle"></i> Desenvolvimento de aplicações</li>
+                            <li><i class="fas fa-check-circle"></i> Automação de sistemas</li>
+                            <li><i class="fas fa-check-circle"></i> Criação de portfólios digitais</li>
+                            <li><i class="fas fa-check-circle"></i> Integração de funcionalidades interativas e bases de
+                                dados</li>
+                            <li><i class="fas fa-check-circle"></i> Criação de sistemas personalizados</li>
+                        </ul>
+                    </div>
+
+                    <!-- Informática -->
+                    <div class="service-block">
+                        <h3><i class="fas fa-desktop"></i> Serviços Informáticos e Internet</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Reparação e Manutenção de computadores e Telefones
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Instalação de sistemas operativos e programas de
+                                computadores</li>
+                            <li><i class="fas fa-check-circle"></i> Instalação e Actualização de drivers.</li>
+                            <li><i class="fas fa-check-circle"></i> Criação de contas digitais (e-mail, iCloud, PayPal,
+                                etc.)
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Serviços digitais personalizados</li>
+                        </ul>
+                    </div>
+
+                    <!-- Internet -->
+                    <div class="service-block">
+                        <h3><i class="fas fa-globe"></i> Serviços de Design Gráfico</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Criação de logotipos</li>
+
+                            <li><i class="fas fa-check-circle"></i> Criação de Panfletos</li>
+                            <li><i class="fas fa-check-circle"></i> Criação de Flayer</li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Escrita e Publicidade -->
+                    <div class="service-block">
+                        <h3><i class="fas fa-pen-fancy"></i> Escrita e Publicidade</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Criação de conteúdos digitais</li>
+                            <li><i class="fas fa-check-circle"></i> Artigos e e-books</li>
+                            <li><i class="fas fa-check-circle"></i> Posts para redes sociais</li>
+                            <li><i class="fas fa-check-circle"></i> Campanhas para divulgação</li>
+                            <li><i class="fas fa-check-circle"></i> Compartilhamento de conhecimento</li>
+                        </ul>
+                    </div>
+
+                    <!-- Vendas -->
+                    <div class="service-block">
+                        <h3><i class="fas fa-gamepad"></i> Serviços de Venda</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Jogos de PC, PS2, PS3, PS4 e PSP</li>
+                            <li><i class="fas fa-check-circle"></i> Cursos: Microsoft Office, Programação e outros</li>
+                            <li><i class="fas fa-check-circle"></i> Aplicativos Windows e premium</li>
+                        </ul>
+                    </div>
+
+                    <!-- Diferenciais -->
+                    <div class="service-block">
+                        <h3><i class="fas fa-star"></i> Nossos Diferenciais</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Soluções personalizadas para cada cliente</li>
+                            <li><i class="fas fa-check-circle"></i> Atendimento rápido e suporte contínuo</li>
+                            <li><i class="fas fa-check-circle"></i> Profissionais qualificados e experientes</li>
+                            <li><i class="fas fa-check-circle"></i> Preços acessíveis e parcelamento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fundador Section -->
+        <section class="founder-section">
+            <div class="container">
+                <div class="founder-grid">
+                    <div class="founder-image">
+                        <!-- FOTO DO FUNDADOR -->
+                        <img src="images/Artur.jpg" alt="Artur Chicomo - Fundador da ABChicomo Services"
+                            class="founder-img">
+                        <div class="founder-experience">
+                            <span>5+ anos</span>
+                            <p>de experiência em tecnologia</p>
+                        </div>
+                    </div>
+                    <div class="founder-content">
+                        <span class="section-badge">👨‍💻 FUNDADOR</span>
+                        <h2>ARTUR CHICOMO</h2>
+                        <h3>Desenvolvedor Web | Empreendedor Digital</h3>
+
+                        <div class="founder-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Acredito que um site não é apenas um cartão de visitas online, mas sim uma ferramenta de
+                                vendas que trabalha 24 horas por dia para o seu negócio. Combinamos tecnologia,
+                                criatividade e profissionalismo para transformar ideias em soluções práticas e
+                                confiáveis."</p>
+                            <span>- Artur Chicomo</span>
+                        </div>
+
+                        <a href="contato.html" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Falar com Artur
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missão, Visão e Valores -->
+        <section class="mvv-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">🎯 MVV</span>
+                    <h2 class="section-title">Missão, Visão e Valores</h2>
+                    <p class="section-subtitle">Os princípios que guiam nosso trabalho diariamente</p>
+                </div>
+
+                <div class="mvv-grid">
+                    <div class="mvv-card">
+                        <div class="mvv-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Missão</h3>
+                        <p>Entregar soluções tecnológicas eficientes e adaptadas à realidade de cada cliente, com
+                            excelência e compromisso, ajudando profissionais liberais a conquistarem mais clientes
+                            através da presença online.</p>
+                    </div>
+
+                    <div class="mvv-card">
+                        <div class="mvv-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Visão</h3>
+                        <p>Ser referência em criação de websites e marketing digital para profissionais liberais em
+                            Angola, reconhecida pela qualidade, inovação e resultados entregues.</p>
+                    </div>
+
+                    <div class="mvv-card">
+                        <div class="mvv-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Valores</h3>
+                        <ul class="values-list">
+                            <li><i class="fas fa-check-circle"></i> Profissionalismo</li>
+                            <li><i class="fas fa-check-circle"></i> Inovação</li>
+                            <li><i class="fas fa-check-circle"></i> Compromisso</li>
+                            <li><i class="fas fa-check-circle"></i> Transparência</li>
+                            <li><i class="fas fa-check-circle"></i> Satisfação do Cliente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Números -->
+        <section class="numbers-section">
+            <div class="container">
+                <h2>ABChicomo Services em Números</h2>
+
+                <div class="numbers-grid">
+                    <div class="number-item">
+                        <div class="number-value">3+</div>
+                        <div class="number-label">Anos de Experiência</div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number-value">50+</div>
+                        <div class="number-label">Projetos Entregues</div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number-value">100%</div>
+                        <div class="number-label">Satisfação</div>
+                    </div>
+                    <div class="number-item">
+                        <div class="number-value">5</div>
+                        <div class="number-label">Áreas de Atuação</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="padding: 4rem 5%; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Vamos trabalhar juntos?</h2>
+                <p
+                    style="color: var(--gray); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Se você é advogado, médico, consultor ou profissional liberal e quer um website que atraia clientes,
+                    entre em contato conosco.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/244954996234?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20ABChicomo"
+                        class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                    <a href="portfolio.html" class="btn btn-outline">Ver Portfólio</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="../images/website/navbar.png" alt="ABChicomo Services" class="footer-logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h3 class="footer-logo-fallback" style="display:none;">ABChicomo<span>Services</span></h3>
+                    <p class="footer-description">Criamos websites profissionais que atraem clientes para advogados,
+                        médicos, consultores e profissionais liberais em Angola.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/ABChicomo" class="social-link" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/Abchicomo" class="social-link" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@abchicomo" class="social-link" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://linkedin.com/company/abchicomo" class="social-link" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="desenvolvimento.html">Criação de Websites</a></li>
+                        <li><a href="identidade-visual.html">Identidade Visual</a></li>
+                        <li><a href="marketing-digital.html">Marketing Digital</a></li>
+                        <li><a href="consultoria.html">Consultoria</a></li>
+                        <li><a href="sistemas.html">Sistemas Empresariais</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../sobre.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contato.html">Contactos</a></li>
+                        <li><a href="../termos.html">Termos de Uso</a></li>
+                        <li><a href="../privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contactos</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> 921 058 404</li>
+                        <li><i class="fab fa-whatsapp"></i> 954 996 234</li>
+                        <li><i class="fas fa-envelope"></i> Abchicomoservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Huila, Angola</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span class="current-year">2024</span> ABChicomo Services. Todos os direitos reservados.
+                        Desenvolvido por ABChicomo Services.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="../termos.html">Termos de Uso</a>
+                    <a href="../privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para atualizar ano -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+            yearElements.forEach(el => {
+                el.textContent = currentYear;
+            });
+        });
+    </script>
+
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

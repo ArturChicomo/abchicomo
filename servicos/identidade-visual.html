@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/website/favicon.ico">
+
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79BJNDZDJR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-79BJNDZDJR');
+    </script>
+
+    <!-- TÍTULO OTIMIZADO PARA SEO -->
+    <title>ABChicomo Services - Identidade Visual | Logotipos Profissionais em Angola</title>
+
+    <!-- META DESCRIPTION -->
+    <meta name="description"
+        content="Criação de identidade visual para advogados, médicos e consultores em Angola. Logotipo profissional, manual de marca, cores e tipografia que transmitem credibilidade.">
+
+    <!-- PALAVRAS-CHAVE -->
+    <meta name="keywords"
+        content="identidade visual Angola, logotipo para advogados, criação de marca Luanda, design gráfico, ABChicomo Services">
+
+    <!-- AUTHOR -->
+    <meta name="author" content="Artur Chicomo - ABChicomo Services">
+
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Identidade Visual - ABChicomo Services">
+    <meta property="og:description"
+        content="Criamos a identidade visual que transmite profissionalismo para seu negócio em Angola.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abchicomo.vercel.com/servicos/identidade-visual.html">
+    <meta property="og:image" content="https://abchicomo.com/images/website/ABChicomo.jpg">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="images/website/favicon.ico">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ESTILOS ESPECÍFICOS ===== */
+        .service-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M0 0 L100 100 M100 0 L0 100" stroke="white" stroke-width="1"/></svg>');
+            background-size: 30px 30px;
+            animation: move 20s linear infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            to {
+                transform: translateX(50%) translateY(50%);
+            }
+        }
+
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-hero h1 {
+            color: white;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .service-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.1);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .overview-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .overview-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .overview-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .overview-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .overview-list li i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .services-detail {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .detail-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .detail-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .detail-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(230, 126, 34, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .detail-card:hover .detail-icon {
+            background: var(--accent-color);
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .detail-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .detail-card p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .pricing-section {
+            padding: 5rem 5%;
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent-color);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-accent);
+            z-index: 2;
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px dashed var(--gray-light);
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .period {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .pricing-features li i {
+            color: var(--success-color);
+        }
+
+        .benefits-section {
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .benefits-section h2 {
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .benefit-item i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            padding: 4rem 5%;
+            text-align: center;
+            background: linear-gradient(135deg, var(--white), var(--light-bg));
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 992px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-card.featured {
+                grid-column: span 2;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                grid-column: auto;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/244954996234?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Identidade%20Visual"
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/website/navbar.png" alt="ABChicomo Services" class="logo-img">
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Serviços <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="desenvolvimento.html">Criação de Websites</a>
+                        <a href="identidade-visual.html" class="active">Identidade Visual</a>
+                        <a href="marketing-digital.html">Marketing Digital</a>
+                        <a href="consultoria.html">Consultoria</a>
+                        <a href="sistemas.html">Sistemas Empresariais</a>
+                    </div>
+                </li>
+                <li><a href="../portfolio.html">Portfólio</a></li>
+                <li><a href="../sobre.html">Sobre Nós</a></li>
+                <li><a href="../contato.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li>Identidade Visual</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="service-hero">
+            <div class="container">
+                <div class="hero-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h1>IDENTIDADE VISUAL PROFISSIONAL</h1>
+                <p>Criamos a imagem que transmite credibilidade e profissionalismo para seu negócio</p>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="overview-grid">
+            <div class="overview-content">
+                <h2>Sua marca com personalidade única</h2>
+                <p>A primeira impressão é a que fica. Uma <strong>identidade visual bem construída</strong> transmite
+                    confiança e atrai os clientes certos para seu negócio.</p>
+                <p>Criamos logotipos e identidades visuais que destacam você da concorrência e comunicam
+                    profissionalismo.</p>
+                <ul class="overview-list">
+                    <li><i class="fas fa-check-circle"></i> Logotipo exclusivo e profissional</li>
+                    <li><i class="fas fa-check-circle"></i> Definição de cores institucionais</li>
+                    <li><i class="fas fa-check-circle"></i> Tipografia personalizada</li>
+                    <li><i class="fas fa-check-circle"></i> Manual de identidade visual</li>
+                </ul>
+            </div>
+            <div class="overview-image" style="text-align: center;">
+                <i class="fas fa-palette" style="font-size: 8rem; color: var(--accent-color); opacity: 0.5;"></i>
+            </div>
+        </section>
+
+        <!-- Serviços Detalhados -->
+        <section class="services-detail">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">O que sua marca precisa</h2>
+                <div class="detail-grid">
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-pencil-ruler"></i></div>
+                        <h3>Criação de Logotipo</h3>
+                        <p>Desenvolvimento de logotipo exclusivo que representa a essência do seu negócio.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> 3 opções de design</li>
+                            <li><i class="fas fa-check"></i> Até 3 rodadas de ajustes</li>
+                            <li><i class="fas fa-check"></i> Arquivos em PNG, JPG, SVG</li>
+                            <li><i class="fas fa-check"></i> Versões colorida e monocromática</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-palette"></i></div>
+                        <h3>Paleta de Cores</h3>
+                        <p>Definição das cores que transmitem a mensagem certa para seu público.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Estudo de psicologia das cores</li>
+                            <li><i class="fas fa-check"></i> Cores principais e secundárias</li>
+                            <li><i class="fas fa-check"></i> Códigos CMYK, RGB e HEX</li>
+                            <li><i class="fas fa-check"></i> Aplicações recomendadas</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-font"></i></div>
+                        <h3>Tipografia</h3>
+                        <p>Escolha das fontes que complementam a personalidade da sua marca.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Fontes para títulos</li>
+                            <li><i class="fas fa-check"></i> Fontes para textos</li>
+                            <li><i class="fas fa-check"></i> Hierarquia visual</li>
+                            <li><i class="fas fa-check"></i> Aplicações em materiais</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-book"></i></div>
+                        <h3>Manual de Marca</h3>
+                        <p>Documento completo com todas as regras de uso da sua identidade visual.</p>
+                        <ul class="detail-list">
+                            <li><i class="fas fa-check"></i> Regras de aplicação do logotipo</li>
+                            <li><i class="fas fa-check"></i> Usos corretos e proibidos</li>
+                            <li><i class="fas fa-check"></i> Exemplos práticos</li>
+                            <li><i class="fas fa-check"></i> Arquivo PDF entregue</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materiais Complementares -->
+        <section style="padding: 3rem 5%; background: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Materiais que podemos criar</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-id-card"
+                            style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        <h4>Cartão de Visita</h4>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-envelope"
+                            style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        <h4>Papel Timbrado</h4>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-folder"
+                            style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        <h4>Pastas</h4>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem;">
+                        <i class="fas fa-signature"
+                            style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem;"></i>
+                        <h4>Assinatura de Email</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preços -->
+        <section class="pricing-section">
+            <div class="container">
+                <h2 style="text-align: center;">Pacotes de Identidade Visual</h2>
+                <p style="text-align: center; color: var(--gray); margin-bottom: 2rem;">Escolha o pacote ideal para sua
+                    marca</p>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Básico</h3>
+                            <div class="price">35.000 Kz</div>
+                            <span class="period">/único</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logotipo profissional</li>
+                            <li><i class="fas fa-check"></i> 3 opções de design</li>
+                            <li><i class="fas fa-check"></i> 2 rodadas de ajustes</li>
+                            <li><i class="fas fa-check"></i> Arquivos PNG e JPG</li>
+                            <li><i class="fas fa-check"></i> Entrega em 5 dias</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Básico%20de%20Identidade%20Visual%20(35.000%20Kz)"
+                                class="btn btn-outline btn-block">Contratar</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">RECOMENDADO</div>
+                        <div class="pricing-header">
+                            <h3>Profissional</h3>
+                            <div class="price">65.000 Kz</div>
+                            <span class="period">/único</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logotipo profissional</li>
+                            <li><i class="fas fa-check"></i> 5 opções de design</li>
+                            <li><i class="fas fa-check"></i> 3 rodadas de ajustes</li>
+                            <li><i class="fas fa-check"></i> Paleta de cores completa</li>
+                            <li><i class="fas fa-check"></i> Tipografia definida</li>
+                            <li><i class="fas fa-check"></i> Manual de identidade básico</li>
+                            <li><i class="fas fa-check"></i> Arquivos PNG, JPG, SVG, PDF</li>
+                            <li><i class="fas fa-check"></i> Cartão de visita incluso</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Profissional%20de%20Identidade%20Visual%20(65.000%20Kz)"
+                                class="btn btn-primary btn-block">Contratar</a>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Completo</h3>
+                            <div class="price">95.000 Kz</div>
+                            <span class="period">/único</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Tudo do pacote Profissional</li>
+                            <li><i class="fas fa-check"></i> 7 opções de design</li>
+                            <li><i class="fas fa-check"></i> 5 rodadas de ajustes</li>
+                            <li><i class="fas fa-check"></i> Manual de marca completo</li>
+                            <li><i class="fas fa-check"></i> Papel timbrado</li>
+                            <li><i class="fas fa-check"></i> Assinatura de email</li>
+                            <li><i class="fas fa-check"></i> Template para redes sociais</li>
+                            <li><i class="fas fa-check"></i> Suporte 30 dias</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="https://wa.me/244954996234?text=Olá!%20Quero%20o%20Pacote%20Completo%20de%20Identidade%20Visual%20(95.000%20Kz)"
+                                class="btn btn-outline btn-block">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section class="benefits-section">
+            <h2>Por que investir em Identidade Visual?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Credibilidade</h3>
+                    <p>Transmita profissionalismo e confiança desde o primeiro contato.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-eye"></i>
+                    <h3>Destaque</h3>
+                    <p>Diferencie-se da concorrência com uma marca memorável.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Conexão</h3>
+                    <p>Crie uma conexão emocional com seus clientes.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Valorização</h3>
+                    <p>Valorize seu serviço e justifique honorários mais altos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <h2>Pronto para dar identidade à sua marca?</h2>
+            <p>Vamos criar juntos a imagem que seu negócio merece.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/244954996234?text=Olá!%20Quero%20uma%20identidade%20visual%20para%20meu%20negócio"
+                    class="btn btn-primary btn-large">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                </a>
+                <a href="../contato.html" class="btn btn-outline btn-large">Usar formulário</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="../images/website/navbar.png" alt="ABChicomo Services" class="footer-logo"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h3 class="footer-logo-fallback" style="display:none;">ABChicomo<span>Services</span></h3>
+                    <p class="footer-description">Criamos websites profissionais que atraem clientes para advogados,
+                        médicos, consultores e profissionais liberais em Angola.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/ABChicomo" class="social-link" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/Abchicomo" class="social-link" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@abchicomo" class="social-link" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://linkedin.com/company/abchicomo" class="social-link" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="desenvolvimento.html">Criação de Websites</a></li>
+                        <li><a href="identidade-visual.html">Identidade Visual</a></li>
+                        <li><a href="marketing-digital.html">Marketing Digital</a></li>
+                        <li><a href="consultoria.html">Consultoria</a></li>
+                        <li><a href="sistemas.html">Sistemas Empresariais</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../sobre.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contato.html">Contactos</a></li>
+                        <li><a href="../termos.html">Termos de Uso</a></li>
+                        <li><a href="../privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contactos</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> 921 058 404</li>
+                        <li><i class="fab fa-whatsapp"></i> 954 996 234</li>
+                        <li><i class="fas fa-envelope"></i> Abchicomoservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Huila, Angola</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span class="current-year">2024</span> ABChicomo Services. Todos os direitos reservados.
+                        Desenvolvido por ABChicomo Services.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="../termos.html">Termos de Uso</a>
+                    <a href="../privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

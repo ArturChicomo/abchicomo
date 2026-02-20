@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/website/favicon.ico">
+
+    <!-- TÍTULO -->
+    <title>Página não encontrada - 404 - ABChicomo Services</title>
+
+    <!-- META DESCRIPTION -->
+    <meta name="description"
+        content="A página que você procura não foi encontrada. Volte ao início ou entre em contato conosco.">
+
+    <!-- ROBOTS -->
+    <meta name="robots" content="noindex, follow">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .error-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--light-bg), var(--white));
+        }
+
+        .error-card {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .error-number {
+            font-size: 8rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            line-height: 1;
+            text-shadow: 5px 5px 0 rgba(230, 126, 34, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .error-card h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .error-card p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .search-box {
+            max-width: 400px;
+            margin: 2rem auto;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            padding: 1rem 1.5rem;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            background: var(--accent-light);
+        }
+
+        .help-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .help-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: var(--primary-color);
+            min-width: 100px;
+            transition: var(--transition);
+        }
+
+        .help-link:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            color: var(--accent-color);
+        }
+
+        .help-link i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .error-number {
+                font-size: 6rem;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/24495499264" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/website/navbar.png" alt="ABChicomo Services" class="logo-img">
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Serviços <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="servicos/desenvolvimento.html">Criação de Websites</a>
+                        <a href="servicos/identidade-visual.html">Identidade Visual</a>
+                        <a href="servicos/marketing-digital.html">Marketing Digital</a>
+                        <a href="servicos/consultoria.html">Consultoria</a>
+                        <a href="servicos/sistemas.html">Sistemas Empresariais</a>
+                    </div>
+                </li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="error-section">
+            <div class="error-card">
+                <div class="error-number">404</div>
+                <h1>Página não encontrada</h1>
+                <p>A página que você está procurando pode ter sido removida, renomeada ou está temporariamente
+                    indisponível.</p>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="O que você procura?">
+                    <button onclick="searchSite()"><i class="fas fa-search"></i></button>
+                </div>
+
+                <p style="margin: 1rem 0;">Ou tente um destes links:</p>
+
+                <div class="help-links">
+                    <a href="index.html" class="help-link">
+                        <i class="fas fa-home"></i>
+                        <span>Início</span>
+                    </a>
+                    <a href="servicos/desenvolvimento.html" class="help-link">
+                        <i class="fas fa-code"></i>
+                        <span>Websites</span>
+                    </a>
+                    <a href="portfolio.html" class="help-link">
+                        <i class="fas fa-images"></i>
+                        <span>Portfólio</span>
+                    </a>
+                    <a href="contato.html" class="help-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contacto</span>
+                    </a>
+                    <a href="https://wa.me/244954996234" class="help-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--gray);">
+                    <i class="fas fa-exclamation-triangle" style="color: var(--accent-color);"></i>
+                    Se você acredita que isso é um erro, <a href="contato.html"
+                        style="color: var(--accent-color);">entre em contato</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer com LOGO -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <!-- LOGO NO FOOTER -->
+                    <img src="images/website/footer.jpg" alt="ABChicomo Services" class="footer-logo" onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'block';
+                  " />
+                    <h3 class="footer-logo-fallback" style="display: none">
+                        ABChicomo<span>Services</span>
+                    </h3>
+                    <p class="footer-description">
+                        Criamos websites profissionais que atraem clientes para advogados,
+                        médicos, consultores e profissionais liberais em Angola.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/ABChicomo" class="social-link" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/ABChicomoServices" class="social-link" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@ABChicomo" class="social-link" target="_blank"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://linkedin.com/company/abchicomo" class="social-link" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="servicos/desenvolvimento.html">Criação de Websites</a>
+                        </li>
+                        <li>
+                            <a href="servicos/identidade-visual.html">Identidade Visual</a>
+                        </li>
+                        <li>
+                            <a href="servicos/marketing-digital.html">Marketing Digital</a>
+                        </li>
+                        <li><a href="servicos/consultoria.html">Consultoria</a></li>
+                        <li>
+                            <a href="servicos/sistemas.html">Sistemas Empresariais</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Pacotes</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="index.html#pacotes">Pacote Presença (75.000 Kz)</a>
+                        </li>
+                        <li>
+                            <a href="index.html#pacotes">Pacote Profissional (125.000 Kz)</a>
+                        </li>
+                        <li>
+                            <a href="index.html#pacotes">Pacote Autoridade (195.000 Kz)</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contactos</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> 921 058 404</li>
+                        <li><i class="fab fa-whatsapp"></i> 954 996 234</li>
+                        <li><i class="fas fa-envelope"></i> Abchicomoservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Huila, Angola</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>
+                        &copy; <span class="current-year">2024</span> ABChicomo Services.
+                        Todos os direitos reservados.
+                    </p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="termos.html">Termos de Uso</a>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function searchSite() {
+            const query = document.getElementById('searchInput').value;
+            if (query.trim()) {
+                window.location.href = `https://www.google.com/search?q=site:abchicomo.vercel.com+${encodeURIComponent(query)}`;
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                searchSite();
+            }
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
